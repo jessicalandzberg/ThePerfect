@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Typing from 'react-typing-animation';
 
 
@@ -26,9 +27,12 @@ class HomeIntro extends React.Component {
 
           <div className= "HIntroRedirect">
                 <div className = "HButtons">
-                  <button className="HomeButton"> WHAT WE DESIGN </button>
-                  <button className="HomeButton"> HOW WE OPERATE </button>
-                  <button className="HomeButton"> NOTE FROM US </button>
+                  <button className="HomeButton"
+                    onClick={() => this.props.scrollTo(this.props.designRef)}> WHAT WE DESIGN </button>
+                  <button className="HomeButton"
+                    onClick={() => this.props.scrollTo(this.props.operateRef)}> HOW WE OPERATE </button>
+                  <button className="HomeButton"
+                    onClick={() => this.props.scrollTo(this.props.noteRef)}> NOTE FROM US </button>
                 </div>
                 <p className = "DownArrow"> &#8595; </p>
           </div>

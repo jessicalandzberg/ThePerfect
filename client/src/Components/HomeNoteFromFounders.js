@@ -5,7 +5,7 @@ class HomeNoteFromFounders extends React.Component {
 
   render () {
     return (
-      <div className="HomeNoteFromFoundersComponent">
+      <div className="HomeNoteFromFoundersComponent" ref={this.props.myRef}>
 
         <div className= "HNoteFromFoundersContainer">
 

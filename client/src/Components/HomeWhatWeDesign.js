@@ -4,8 +4,9 @@ import React from 'react';
 class HomeWhatWeDesign extends React.Component {
 
   render () {
+
     return (
-      <div className="HomeWhatWeDesignComponent">
+      <div className="HomeWhatWeDesignComponent" ref={this.props.myRef}>
 
         <div className= "HWhatContainer">
 

@@ -5,7 +5,7 @@ class HomeHowWeOperate extends React.Component {
 
   render () {
     return (
-      <div className="HomeHowWeOperateComponent">
+      <div className="HomeHowWeOperateComponent" ref={this.props.myRef}>
         <div className= "HHowContainer">
           <div className= "HHowTitle">
             <p> How we operate </p>
