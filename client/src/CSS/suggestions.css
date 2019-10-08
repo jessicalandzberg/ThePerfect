@@ -1,0 +1,13 @@
+.SuggestionsComponent {
+  height: 100%
+}
+
+.SuggestionsContainer {
+  min-height: calc(100vh - 80px - 50px);
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

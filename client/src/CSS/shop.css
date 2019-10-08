@@ -1,0 +1,51 @@
+.ShopComponent {
+  height: 100%
+}
+
+
+  /* ==============================
+  =============HOME Intro=============
+  ============================== */
+  .ShopContainer {
+    min-height: calc(100vh - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+      .ShopTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+          .ShopTitle h1 {
+            margin: 20px;
+          }
+
+      .ShopContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+          .ShopProductCard {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+          }
+
+                .ProductCardLS {
+                  width: 50%
+                }
+
+                  .ProductCardLS img {
+                    width: 100%;
+                  }
+
+                .ProductCardRS {
+                  width: 50%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: center;
+                }

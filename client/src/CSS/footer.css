@@ -1,0 +1,12 @@
+.FooterComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px black solid
+}
+
+.FooterComponent p {
+  margin: 0;
+
+}

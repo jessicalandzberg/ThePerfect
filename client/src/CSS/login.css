@@ -1,0 +1,70 @@
+.SignInComponent {
+  height: 100%;
+}
+
+.LoginComponent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginContainer {
+  width: 420px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.FormInput {
+  display: block;
+  width: 85%;
+  border: none;
+  border-bottom: solid 1px black;
+  padding: 1em;
+  font-size: 1em;
+  color: black;
+  margin: 35px 0 0;
+  margin-left: 8px;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: gray;
+}
+
+.LoginButton {
+  font-size: 1em;
+  background-color: #e42148;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding: 0px;
+  margin: 3em 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.LoginButton:hover {
+  background-color: black
+}
+
+.RegisterComponent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.RegisterContainer {
+  width: 420px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

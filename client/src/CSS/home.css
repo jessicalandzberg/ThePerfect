@@ -1,0 +1,230 @@
+/* ==============================
+=============GENERAL HOME=============
+============================== */
+
+.HomeComponent {
+  height: 100%
+}
+
+  .HomeComponent p {
+    margin: 0;
+  }
+
+  .DownArrow {
+    font-size: 30px;
+  }
+
+  /* ==============================
+  =============HOME Intro=============
+  ============================== */
+
+.HomeIntroComponent {
+  min-height: calc(100vh - 80px);
+  /* background-image: url("https://res.cloudinary.com/jeslan/image/upload/v1570046541/Project%201/il_794xN.1816499677_6eeo_n5wlxf"); */
+  /* background-size: cover; */
+}
+
+  .HIntroContainer {
+    height: calc(100vh - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .HIntroContent {
+      flex: 8;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+          .Hleft {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .Hright {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+    .HIntroRedirect {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+      .HButtons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: space-around;
+      }
+
+      .HomeButton {
+        border-radius: 4px;
+        padding: 10px 10px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 19px;
+        background: white;
+        font-family: 'Amiri', serif !important;
+      }
+
+      .HButtons button:hover {
+        background: black;
+        color: white;
+      }
+
+/* ==============================
+=============HOME What We Design=============
+============================== */
+
+.HomeWhatWeDesignComponent {
+  min-height: calc(100vh - 80px);
+  background-color: #8F8B8E;
+}
+
+  .HWhatContainer {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+  }
+
+      .HWhatTitle {
+        flex: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+          .HWhatTitle p {
+            margin: 0;
+            font-size: 32px;
+          }
+
+      .HWhatContent {
+        flex: 8.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .HWhatRow {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+        .HWhatRow div {
+          padding-left: 30px;
+          padding-right: 30px;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .HWhatRow p {
+          font-size: 20px;
+          text-align: center;
+        }
+
+
+
+  /* ==============================
+  =============HOME How We Operate=============
+  ============================== */
+
+.HomeHowWeOperateComponent {
+  min-height: calc(100vh - 80px);
+  background: orange;
+}
+
+  .HHowContainer {
+    min-height: calc(100vh - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .HHowTitle {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+        .HHowTitle p {
+          margin: 0;
+          font-size: 32px;
+        }
+
+    .HHowContent {
+      flex: 8.5;
+      display: flex;
+      flex-direction: row;
+    }
+
+      .HHowLS {
+        width: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+      }
+
+      .HHowMiddle {
+        width: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+      }
+
+      .HHowRS {
+        width: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+      }
+
+/* ==============================
+=============HOME Note from founders=============
+============================== */
+
+    .HomeNoteFromFoundersComponent {
+      min-height: calc(100vh - 80px - 50px);
+      background: green;
+    }
+
+      .HNoteFromFoundersContainer {
+        min-height: calc(100vh - 80px - 50px);
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+
+        .HNoteTitle {
+          flex: 1.5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+            .HNoteTitle p {
+              margin: 0;
+              font-size: 32px;
+            }
+
+        .HNoteContent {
+          flex: 8.5;
+          display: flex;
+          flex-direction: row;
+        }

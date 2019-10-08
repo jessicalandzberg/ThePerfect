@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Coda|Cormorant+Garamond|El+Messiri|Josefin+Slab|Just+Another+Hand|Lustria|Noto+Serif+TC|Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amiri|Libre+Baskerville&display=swap');
+
+.AppComponent {
+  /* font-family: 'Lora', serif; */
+  /* font-family: 'Libre Baskerville', serif; */
+  /* font-family: sans-serif; */
+  font-family: 'Amiri', serif;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 80px 1fr 50px;
+  grid-template-areas:
+    "Nav Nav Nav Nav"
+    "Main Main Main Main"
+    "Footer Footer Footer Footer"
+}
+
+.NavComponent {
+  z-index: 1;
+  background: white;
+  width: 100%;
+  height: 80px;
+  grid-area: Nav;
+  position: fixed;
+}
+
+.MainComponent {
+  grid-area: Main;
+}
+
+.FooterComponent {
+  grid-area: Footer;
+}
