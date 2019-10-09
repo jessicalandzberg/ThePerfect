@@ -1,13 +1,5 @@
 class UsersController < ApplicationController
   before_action :authorize_request, only: :update
-  before_action :user_params
-  # add delete
-
-
-  # GET /users/1
-  def show
-    render json: @user
-  end
 
   # POST /users
   def create

@@ -1,5 +1,5 @@
 const axios = require( 'axios' );
-const api = axios.create({
+export const api = axios.create({
   baseURL: 'http://localhost:3000'
 })
 
@@ -25,4 +25,9 @@ export const verifyUser = async () => {
     return resp.data
   }
   return false
+}
+
+export const editUser = async (userID, userData) => {
+  const resp = await api.put(`/users/${userID}`, {user: userData});
+  return resp.data
 }

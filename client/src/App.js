@@ -7,7 +7,8 @@ import "./CSS/general.css"
 import {
   loginUser,
   registerUser,
-  verifyUser
+  verifyUser,
+  editUser
 } from './services/users_api-helper'
 import {
   getProducts
@@ -28,7 +29,6 @@ class App extends React.Component {
     currentUser: false,
     favorites: [],
     editAccountFormData: {
-      id: '',
       email: '',
       name: '',
       birthday: '',
@@ -65,7 +65,8 @@ class App extends React.Component {
     e.preventDefault();
     const currentUser = await registerUser(this.state.authFormData);
     this.setState({ currentUser })
-    console.log('this is handle Register', this.state.currentUser)
+    console.log('this is handle Register', this.state.currentUser);
+    this.props.history.push("/")
   }
 
   handleLogout = () => {
@@ -82,7 +83,7 @@ class App extends React.Component {
   handleVerify = async () => {
     const currentUser = await verifyUser();
     await this.setState({ currentUser })
-    await console.log('this is handle verify', this.state.currentUser)
+    console.log('this is handle verify', this.state.currentUser)
   }
 
   /* ==============================
@@ -92,7 +93,7 @@ class App extends React.Component {
   getProducts = async() => {
     const products = await getProducts();
     await this.setState({products});
-    await console.log('this is getProducts', this.state.products)
+    console.log('this is getProducts', this.state.products)
   }
 
   /* ==============================
@@ -133,15 +134,21 @@ class App extends React.Component {
   =============UPDATE ACCOUNT=============
   ============================== */
 
-  updateAccount = async(e) => {
+  updateUser = async(e) => {
     e.preventDefault();
-    const {}
+    const data = this.state.editAccountFormData;
+    const { id } = this.state.currentUser;
+    const { email, password } = await editUser(id, data);
+    const currentUser = await loginUser({ email, password });
+    this.setState({ currentUser });
+    this.getFavs();
+    this.props.history.push("/")
   }
 
 
   async componentDidMount() {
     await this.handleVerify();
-    this.getProducts();
+    await this.getProducts();
 
     if (this.state.currentUser) {
       this.getFavs()}

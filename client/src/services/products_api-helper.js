@@ -1,7 +1,5 @@
 const axios = require( 'axios' );
-const api = axios.create({
-  baseURL: 'http://localhost:3000'
-})
+const {api} = require('./users_api-helper')
 
 export const getProducts = async () => {
   const resp =await api.get('/products');

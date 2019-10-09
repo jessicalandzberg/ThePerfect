@@ -22,7 +22,7 @@ class SignIn extends React.Component {
                                 handleRegister = {this.props.handleRegister}
                             />} />
 
-            <Route path= "/"
+            <Route path= "/signin"
             render = {() => <Login
                                 authFormData={this.props.authFormData}
                                 authHandleChange = {this.props.authHandleChange}
