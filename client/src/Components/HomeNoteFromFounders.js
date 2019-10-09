@@ -17,6 +17,12 @@ class HomeNoteFromFounders extends React.Component {
             <p> Note from founders CONTENT</p>
           </div>
 
+          <div className= "HNoteRedirect">
+                <p className = "DownArrow"
+                    onClick={() => this.props.scrollTo(this.props.introRef)}>
+                    &#8593; </p>
+          </div>
+
         </div>
 
       </div>

@@ -25,6 +25,12 @@ class HomeWhatWeDesign extends React.Component {
             </div>
           </div>
 
+          <div className= "HWhatRedirect">
+                <p className = "DownArrow"
+                    onClick={() => this.props.scrollTo(this.props.operateRef)}>
+                    &#8595; </p>
+          </div>
+
         </div>
 
       </div>

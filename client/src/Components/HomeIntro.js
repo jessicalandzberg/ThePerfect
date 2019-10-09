@@ -7,7 +7,7 @@ class HomeIntro extends React.Component {
 
   render () {
     return (
-      <div className="HomeIntroComponent">
+      <div className="HomeIntroComponent" ref={this.props.myRef}>
 
         <div className= "HIntroContainer">
 
@@ -20,7 +20,7 @@ class HomeIntro extends React.Component {
                 </div>
 
                 <div className = "Hright">
-                  <h1> <Typing speed= {60} hideCursor= {true}> <Typing.Delay ms={5000} /> We focus on that 30% </Typing> </h1>
+                  <h1> <Typing speed= {60} hideCursor= {true}> <Typing.Delay ms={4000} /> We focus on that 30% </Typing> </h1>
                 </div>
 
           </div>
@@ -34,7 +34,8 @@ class HomeIntro extends React.Component {
                   <button className="HomeButton"
                     onClick={() => this.props.scrollTo(this.props.noteRef)}> NOTE FROM US </button>
                 </div>
-                <p className = "DownArrow"> &#8595; </p>
+                <p className = "DownArrow"
+                    onClick={() => this.props.scrollTo(this.props.designRef)}> &#8595; </p>
           </div>
 
       </div>

@@ -8,6 +8,7 @@ import "../CSS/home.css";
 
 
 const Home = (props) => {
+  const introRef = React.createRef();
   const designRef = React.createRef();
   const operateRef = React.createRef();
   const noteRef = React.createRef();
@@ -22,17 +23,24 @@ const Home = (props) => {
 
   return (
     <div className="HomeComponent">
-      <HomeIntro 
+      <HomeIntro
+        myRef={introRef}
         designRef={designRef}
         operateRef={operateRef}
         noteRef={noteRef}
         scrollTo={scrollTo}/>
       <HomeWhatWeDesign
-        myRef={designRef} />
-      <HomeHowWeOperate 
-        myRef={operateRef} />
-      <HomeNoteFromFounders 
-        myRef={noteRef}/>
+        myRef={designRef}
+        operateRef={operateRef}
+        scrollTo={scrollTo} />
+      <HomeHowWeOperate
+        myRef={operateRef}
+        noteRef={noteRef}
+        scrollTo={scrollTo} />
+      <HomeNoteFromFounders
+        myRef={noteRef}
+        introRef={introRef}
+        scrollTo={scrollTo} />
     </div>
   )
 }
