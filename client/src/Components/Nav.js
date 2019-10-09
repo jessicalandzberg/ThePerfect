@@ -29,7 +29,7 @@ render (){
             this.props.currentUser
               ?
               <>
-                <p>My account</p>
+                <p> <Link to='/account'> My account </Link> </p>
                 <p onClick={this.props.handleLogout}>Logout</p>
               </>
               :

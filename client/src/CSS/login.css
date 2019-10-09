@@ -1,6 +1,57 @@
+/* ==============================
+=============SIGN IN General=============
+============================== */
+
 .SignInComponent {
   height: 100%;
 }
+
+      .FormInput {
+        font-family: 'Amiri', serif !important;
+        display: block;
+        width: 85%;
+        border: none;
+        border-bottom: solid 1px black;
+        padding: 1em;
+        font-size: 16px;
+        color: black;
+        margin: 35px 0 0;
+        margin-left: 8px;
+        outline: none;
+      }
+
+      ::-webkit-input-placeholder {
+        color: gray;
+      }
+
+      .LoginButton {
+        border-radius: 2px;
+        background: white;
+        border: 2px black solid;
+        color: black;
+        font-family: 'Amiri', serif !important;
+        font-size: 16px;
+        /* background-color: #e42148; */
+        /* color: #fff; */
+        width: 100%;
+        height: 50px;
+        outline: none;
+        padding: 0px;
+        margin: 3em 0;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .LoginButton:hover {
+        background: black;
+        color: white;
+      }
+
+/* ==============================
+============SIGN IN Log in=============
+============================== */
+
+
 
 .LoginComponent {
   height: 100%;
@@ -10,48 +61,38 @@
   align-items: center;
 }
 
-.LoginContainer {
-  width: 420px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+    .LoginContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.FormInput {
-  display: block;
-  width: 85%;
-  border: none;
-  border-bottom: solid 1px black;
-  padding: 1em;
-  font-size: 1em;
-  color: black;
-  margin: 35px 0 0;
-  margin-left: 8px;
-  outline: none;
-}
+          .LoginTitle {
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
+          }
 
-::-webkit-input-placeholder {
-  color: gray;
-}
+          .LoginContainer form {
+            font-size: 32px;
+            width: 420px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+          }
 
-.LoginButton {
-  font-size: 1em;
-  background-color: #e42148;
-  color: #fff;
-  width: 100%;
-  height: 50px;
-  outline: none;
-  border: none;
-  padding: 0px;
-  margin: 3em 0;
-  text-align: center;
-  letter-spacing: 1px;
-}
+          .LoginRedirect {
+            font-size: 16px;
+            margin: 0px;
+            text-align: center;
+          }
 
-.LoginButton:hover {
-  background-color: black
-}
+/* ==============================
+=============SIGN IN Register=============
+============================== */
 
 .RegisterComponent {
   height: 100%;
@@ -61,10 +102,25 @@
   align-items: center;
 }
 
-.RegisterContainer {
-  width: 420px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+    .RegisterContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+          .RegisterContainer p {
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
+          }
+
+          .RegisterContainer form {
+            font-size: 32px;
+            width: 420px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+          }

@@ -10,8 +10,8 @@ class Register extends React.Component {
     const {email, password} = this.props.authFormData
     return (
       <div className="RegisterComponent">
-        <h1> Lets make an account </h1>
         <div className="RegisterContainer">
+        <p> We agree! <br /> Making an account makes your life even easier </p>
         <form onSubmit= {this.props.handleRegister}>
           <input className="FormInput" name="email" value= {email} onChange={this.props.authHandleChange} type="text" placeholder="Username" required />
           <input className="FormInput" name="password" value= {password} onChange={this.props.authHandleChange}type="password" placeholder="Password" required />

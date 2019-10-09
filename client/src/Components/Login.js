@@ -13,14 +13,14 @@ class Login extends React.Component {
     const {email, password} = this.props.authFormData
     return (
       <div className="LoginComponent">
-        <h1> Welcome back! </h1>
         <div className="LoginContainer">
+          <p className = "LoginTitle"> Welcome back! </p>
           <form onSubmit= {this.props.handleLogin}>
             <input className="FormInput" name="email" value= {email} onChange={this.props.authHandleChange} type="text" placeholder="Username" required />
             <input className="FormInput" name="password" value= {password} onChange={this.props.authHandleChange}type="password" placeholder="Password" required />
             <button className= "LoginButton"> Login </button>
           </form>
-          <p> Don't have an account? <Link to='/signin/register'> Create one </Link> </p>
+          <p className= "LoginRedirect"> Don't have an account? <Link to='/signin/register'> Create one </Link> </p>
         </div>
       </div>
     )

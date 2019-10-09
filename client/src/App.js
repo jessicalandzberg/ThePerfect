@@ -27,6 +27,13 @@ class App extends React.Component {
     },
     currentUser: false,
     favorites: [],
+    editAccountFormData: {
+      id: '',
+      email: '',
+      name: '',
+      birthday: '',
+      geography: '',
+    },
   }
 
   /* ==============================
@@ -120,6 +127,15 @@ class App extends React.Component {
     }))
     console.log('this is favorites from removefav', this.state.favorites)
     }
+  }
+
+  /* ==============================
+  =============UPDATE ACCOUNT=============
+  ============================== */
+
+  updateAccount = async(e) => {
+    e.preventDefault();
+    const {}
   }
 
 

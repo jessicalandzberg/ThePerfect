@@ -8,6 +8,7 @@ import OurStory from "./OurStory"
 import Cart from "./Cart"
 import SignIn from "./SignIn"
 import MyFavs from "./Myfavs"
+import MyAccount from "./MyAccount"
 
 
 class Main extends React.Component {
@@ -22,8 +23,8 @@ class Main extends React.Component {
           <Route path= "/Shop"
           render = {() => <Shop
                           products={this.props.products}
-                          favOnClick={this.props.favOnClick}
                           favorites = {this.props.favorites}
+                          favOnClick={this.props.favOnClick}
                           unfavOnClick={this.props.unfavOnClick}
                           /> } />
           <Route path= "/Suggestions"
@@ -40,9 +41,14 @@ class Main extends React.Component {
           render = {() => <MyFavs
                             favorites = {this.props.favorites}
                             currentUser={this.props.currentUser}
+                            favOnClick={this.props.favOnClick}
+                            unfavOnClick={this.props.unfavOnClick}
                           />} />
           <Route path= "/Cart"
           render = {() => <Cart
+                          />} />
+          <Route path= "/account"
+          render = {() => <MyAccount
                           />} />
           <Route path= "/" component= {Home} />
         </Switch>

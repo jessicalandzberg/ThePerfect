@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import MyfavsProductCard from "./MyfavsProductCard"
 
 
 class Myfavs extends React.Component {
@@ -14,17 +15,11 @@ class Myfavs extends React.Component {
     if(this.props.favorites.length > 0) {
       favRender = this.props.favorites.map( favorite => {
         return (
-          <div className ="A" key= {favorite.id}>
-            <div className ="CardLS">
-              <img alt="leather jacket" src= {favorite.picture}/>
-            </div>
-
-            <div className ="CardRS">
-              <h2> {favorite.name} </h2>
-              <h3> {favorite.color} </h3>
-              <h4> {favorite.price} </h4>
-            </div>
-          </div>
+          <MyfavsProductCard
+            product= {favorite}
+            favorites= {this.props.favorites}
+            unfavOnClick= {this.props.unfavOnClick}
+            favOnClick= {this.props.favOnClick} />
         )
       })
     }
