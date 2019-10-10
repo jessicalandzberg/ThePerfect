@@ -6,7 +6,9 @@ function Footer() {
 
     return(
       <nav className= "FooterComponent">
-        <p> This is Footer </p>
+        <div className= "FooterContainer">
+          <p> © 2019 ThePerfect Inc. </p>
+        </div>
       </nav>
     )
 }

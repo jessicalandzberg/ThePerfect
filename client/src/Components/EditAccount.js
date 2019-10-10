@@ -17,7 +17,7 @@ class EditAccount extends React.Component {
                 type= "text"
                 name= "email"
                 value= {this.props.editAccountFormData.email}
-                onChange = {this.props.editHandleChange} />
+                onChange = {this.props.editHandleChange} required />
 
               <label htmlFor= "firstname"> First name </label>
               <input
