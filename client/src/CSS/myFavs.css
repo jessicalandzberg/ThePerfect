@@ -1,0 +1,66 @@
+/* ==============================
+=============MYFAVS Generak=============
+============================== */
+
+.MyFavsComponent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    .MyFavsContainer {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+          .MyFavsButton {
+            border-radius: 2px;
+            background: white;
+            border: 2px black solid;
+            color: black;
+            font-family: 'Amiri', serif !important;
+            font-size: 16px;
+            padding: 0px;
+            width: 250px;
+            height: 50px;
+            outline: none;
+            text-align: center;
+            letter-spacing: 1px;
+          }
+
+          .MyFavsButton:hover {
+            background: black;
+            color: white;
+          }
+
+/* ==============================
+=============MYFAVS No Favs=============
+============================== */
+
+      .MyFavsNoFavContainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+          .MyFavsNoFavHeart {
+            font-size: 32px;
+            text-align: center;
+            margin: 0px;
+          }
+
+          .MyFavsNoFavTitle {
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
+          }
