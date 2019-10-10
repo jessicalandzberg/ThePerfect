@@ -1,0 +1,129 @@
+/* ==============================
+=============ACCOUNT General=============
+============================== */
+
+.AccountComponent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    .AccountContainer {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+
+          .AccountTitle {
+            flex: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+
+              .AccountTitle p {
+                font-size: 32px;
+                font-weight: bold;
+                margin: 0px;
+              }
+
+          .AccountContent {
+            width: 100%;
+            flex: 8.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+
+
+/* ==============================
+=============ACCOUNT Account Summary=============
+============================== */
+
+.AccountSummaryComponent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ==============================
+=============ACCOUNT Edit Account=============
+============================== */
+
+
+  .EditAccountComponent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .EditAccountForm {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: 450px;
+    }
+
+          .EditAccountForm label {
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+          }
+
+          .EditAccountFormInput {
+            font-family: 'Amiri', serif !important;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: solid 1px black;
+            /* padding: 1em; */
+            font-size: 16px;
+            color: black;
+            padding-bottom: 10px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 25px;
+            outline: none;
+          }
+
+                ::-webkit-input-placeholder {
+                  color: gray;
+                }
+
+          .AccountButton {
+            border-radius: 2px;
+            background: white;
+            border: 2px black solid;
+            color: black;
+            font-family: 'Amiri', serif !important;
+            font-size: 16px;
+            width: 100%;
+            height: 50px;
+            outline: none;
+            padding: 0px;
+            margin-top: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+          }
+
+
+                  .AccountButton:hover {
+                    background: black;
+                    color: white;
+                  }

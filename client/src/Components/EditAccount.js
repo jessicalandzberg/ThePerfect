@@ -6,14 +6,17 @@ class EditAccount extends React.Component {
   render () {
     return (
       <div className="EditAccountComponent">
-        <div className="EditAccountContainer">
+        <div className="AccountContainer">
 
-          <p className = "EditAccountTitle"> Edit my account </p>
+          <div className =  "AccountTitle">
+              <p> Edit my account </p>
+          </div>
 
-          <div className="EditAccountContent">
+          <div className="AccountContent">
             <form className="EditAccountForm" onSubmit= {this.props.updateUserOnClick}>
               <label htmlFor= "email"> Email </label>
               <input
+                className= "EditAccountFormInput"
                 type= "text"
                 name= "email"
                 value= {this.props.editAccountFormData.email}
@@ -21,6 +24,7 @@ class EditAccount extends React.Component {
 
               <label htmlFor= "firstname"> First name </label>
               <input
+                className= "EditAccountFormInput"
                 type= "text"
                 name= "firstname"
                 value= {this.props.editAccountFormData.firstname}
@@ -28,6 +32,7 @@ class EditAccount extends React.Component {
 
               <label htmlFor= "birthday"> Birthday (mm/dd/yyyy) </label>
               <input
+                className= "EditAccountFormInput"
                 type= "text"
                 name= "birthday"
                 value= {this.props.editAccountFormData.birthday}
@@ -35,12 +40,13 @@ class EditAccount extends React.Component {
 
               <label htmlFor= "password"> Enter your current password to confirm changes </label>
               <input
+                  className= "EditAccountFormInput"
                   type= "password"
                   name= "password"
                   value={this.props.editPassword}
                   onChange = {this.props.passwordHandleChange} required/>
 
-              <button type="Submit"> Submit </button>
+              <button className= "AccountButton" type="Submit"> Submit </button>
 
             </form>
           </div>

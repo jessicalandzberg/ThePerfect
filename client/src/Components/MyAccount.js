@@ -1,7 +1,8 @@
 import React from 'react';
 import {Route , Switch} from "react-router-dom";
 import EditAccount from "./EditAccount"
-import AccountSummary from "./AccountSummary"
+import AccountSummary from "./AccountSummary";
+import "../CSS/account.css";
 
 
 class MyAccount extends React.Component {
