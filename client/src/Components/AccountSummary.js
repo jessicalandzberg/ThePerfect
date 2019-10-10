@@ -15,16 +15,38 @@ class AccountSummary extends React.Component {
 
           <div className="AccountContent">
             <div className= "Card">
-              <p> Email: </p>
-              <p> {this.props.currentUser.email} </p>
-              <p> First name: </p>
-              <p> {this.props.currentUser.firstname}  </p>
-              <p> Birthday: </p>
-              <p>{this.props.currentUser.birthday} </p>
+              <div className= "AccountSummaryRow">
+                  <div className= "AccountSummaryLabel">
+                    <p> Email: </p>
+                  </div>
+                  <div className= "AccountSummaryInfo">
+                    <p> {this.props.currentUser.email} </p>
+                  </div>
+              </div>
+
+              <div className= "AccountSummaryRow">
+                  <div className= "AccountSummaryLabel">
+                    <p> First name: </p>
+                  </div>
+                  <div className= "AccountSummaryInfo">
+                    <p> {this.props.currentUser.firstname}  </p>
+                  </div>
+              </div>
+
+              <div className= "AccountSummaryRow">
+                  <div className= "AccountSummaryLabel">
+                    <p> Birthday: </p>
+                  </div>
+                  <div className= "AccountSummaryInfo">
+                    <p>{this.props.currentUser.birthday} </p>
+                  </div>
+              </div>
+
               <button
                 className= "AccountButton"
                 type="Submit"
-                onClick= {this.props.setFormOnClick}> Edit </button>
+                onClick= {this.props.setFormOnClick}>
+                Edit </button>
           </div>
         </div>
       </div>

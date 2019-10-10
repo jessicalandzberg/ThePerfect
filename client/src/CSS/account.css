@@ -41,6 +41,29 @@
             align-items: center;
           }
 
+          .AccountButton {
+            border-radius: 2px;
+            background: white;
+            border: 2px black solid;
+            color: black;
+            font-family: 'Amiri', serif !important;
+            font-size: 16px;
+            width: 100%;
+            height: 50px;
+            outline: none;
+            padding: 0px;
+            margin-top: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+          }
+
+
+                  .AccountButton:hover {
+                    background: black;
+                    color: white;
+                  }
+
+
 
 
 /* ==============================
@@ -55,6 +78,32 @@
   justify-content: center;
   align-items: center;
 }
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 450px;
+}
+
+      .AccountSummaryRow {
+        width: 100%;
+        display: flex;
+      }
+
+      .AccountSummaryLabel {
+        width: 30%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .AccountSummaryInfo {
+        width: 70%;
+        text-align: right;
+        font-size: 18px;
+      }
+
 
 
 /* ==============================
@@ -79,10 +128,10 @@
     }
 
           .EditAccountForm label {
-            font-size: 16px;
             width: 100%;
             text-align: left;
             font-weight: bold;
+            font-size: 18px;
           }
 
           .EditAccountFormInput {
@@ -91,10 +140,9 @@
             width: 100%;
             border: none;
             border-bottom: solid 1px black;
-            /* padding: 1em; */
-            font-size: 16px;
+            font-size: 18px;
             color: black;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
             padding-top: 0px;
             padding-left: 0px;
             padding-right: 0px;
@@ -105,25 +153,3 @@
                 ::-webkit-input-placeholder {
                   color: gray;
                 }
-
-          .AccountButton {
-            border-radius: 2px;
-            background: white;
-            border: 2px black solid;
-            color: black;
-            font-family: 'Amiri', serif !important;
-            font-size: 16px;
-            width: 100%;
-            height: 50px;
-            outline: none;
-            padding: 0px;
-            margin-top: 20px;
-            text-align: center;
-            letter-spacing: 1px;
-          }
-
-
-                  .AccountButton:hover {
-                    background: black;
-                    color: white;
-                  }
