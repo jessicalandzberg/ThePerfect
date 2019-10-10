@@ -1,4 +1,5 @@
 import React from 'react';
+import "../CSS/Cart.css"
 
 
 class Cart extends React.Component {
@@ -6,7 +7,10 @@ class Cart extends React.Component {
   render () {
     return (
       <div className="CartComponent">
-          <p> This is the Cart component </p>
+        <div className="CartContainer">
+          <p className="CartTitle"> Shopping can be easy and enjoyable! </p>
+          <button className= "CartButton" onClick= {this.props.cartRedirect}> Check out the collection </button>
+        </div>
       </div>
     )
   }

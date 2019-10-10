@@ -10,7 +10,7 @@ class ShopProductCard extends React.Component {
   }
   render() {
     return (
-              <div className ="ShopProductCard" key= {this.props.product.id}>
+              <div className ="ShopProductCard">
                 <div className ="ProductCardLS">
                   <img alt="leather jacket" src= {this.props.product.picture}/>
                 </div>

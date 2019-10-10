@@ -30,10 +30,10 @@ class App extends React.Component {
     favorites: [],
     editAccountFormData: {
       email: '',
-      name: '',
+      firstname: '',
       birthday: '',
-      geography: '',
     },
+    editPassword: '',
   }
 
   /* ==============================
@@ -135,14 +135,56 @@ class App extends React.Component {
   ============================== */
 
   updateUser = async(e) => {
+    e.preventDefault()
+    const currentEmail = this.state.currentUser.email;
+    const currentPassword = this.state.editPassword;
+    const checkLogin = await loginUser({ email: currentEmail, password: currentPassword })
+    if (!checkLogin.error) {
+      const data  = this.state.editAccountFormData;
+      const { id } = this.state.currentUser;
+      const { email } = await editUser(id, data);
+      const currentUser = await loginUser({ email: email, password: currentPassword });
+      this.setState({ currentUser });
+      this.getFavs();
+      this.props.history.push("/account")
+    } else {
+      console.log("Changes not made")
+    }
+  }
+
+  setEditAccountFormData = async(e) => {
     e.preventDefault();
-    const data = this.state.editAccountFormData;
-    const { id } = this.state.currentUser;
-    const { email, password } = await editUser(id, data);
-    const currentUser = await loginUser({ email, password });
-    this.setState({ currentUser });
-    this.getFavs();
-    this.props.history.push("/")
+    const {id, password_digest, created_at, updated_at, ...editAccountFormData} = this.state.currentUser;
+    this.setState({ editAccountFormData });
+    this.props.history.push("/account/edit")
+  }
+
+  editHandleChange = (e) => {
+     const {name, value} = e.target;
+     this.setState(prevState => ({
+       editAccountFormData: {
+         ...prevState.editAccountFormData,
+         [name]: value
+       }
+     }))
+     console.log('this is edit handle change', this.state.editAccountFormData)
+   }
+
+   passwordHandleChange = (e) => {
+      const {name, value} = e.target;
+      this.setState(prevState => ({
+        editPassword: value,
+        }
+      ))
+      console.log('this is password handle change', this.state.editPassword)
+    }
+
+  /* ==============================
+  =============CART REDIRECT=============
+  ============================== */
+
+  cartRedirect = (e) => {
+    this.props.history.push("/Shop")
   }
 
 
@@ -169,7 +211,15 @@ class App extends React.Component {
           favorites = {this.state.favorites}
           currentUser={this.state.currentUser}
           favOnClick={this.addFav}
-          unfavOnClick={this.removeFav}/>
+          unfavOnClick={this.removeFav}
+          editAccountFormData={this.state.editAccountFormData}
+          updateUserOnClick={this.updateUser}
+          setFormOnClick= {this.setEditAccountFormData}
+          editHandleChange = {this.editHandleChange}
+          passwordHandleChange = {this.passwordHandleChange}
+          editPassword={this.state.editPassword}
+          cartRedirect={this.cartRedirect}
+          />
         <Footer />
       </div>
     )

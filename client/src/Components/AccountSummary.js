@@ -8,9 +8,11 @@ class AccountSummary extends React.Component {
     return (
       <div className="AccountSummaryComponent">
         <div className="AccountSummaryContainer">
-
           <p className = "AccountSummaryTitle"> My Account </p>
-          <button className= "AccountSummaryButton"> <Link to='/account/edit'> Edit </Link> </button>
+          <p> {this.props.currentUser.email} </p>
+          <p> {this.props.currentUser.birthday} </p>
+          <p> {this.props.currentUser.firstname} </p>
+          <button className= "AccountSummaryButton" onClick= {this.props.setFormOnClick}> Edit </button>
 
         </div>
       </div>

@@ -13,6 +13,7 @@ class Shop extends React.Component {
     const products = this.props.products.map( product => {
       return (
         <ShopProductCard
+          key= {product.id}
           product= {product}
           favorites= {this.props.favorites}
           unfavOnClick= {this.props.unfavOnClick}

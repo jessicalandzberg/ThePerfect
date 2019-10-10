@@ -46,9 +46,17 @@ class Main extends React.Component {
                           />} />
           <Route path= "/Cart"
           render = {() => <Cart
+                            cartRedirect={this.props.cartRedirect}
                           />} />
           <Route path= "/account"
           render = {() => <MyAccount
+                            currentUser={this.props.currentUser}
+                            editAccountFormData={this.props.editAccountFormData}
+                            updateUserOnClick={this.props.updateUserOnClick}
+                            setFormOnClick= {this.props.setFormOnClick}
+                            editHandleChange = {this.props.editHandleChange}
+                            passwordHandleChange = {this.props.passwordHandleChange}
+                            editPassword={this.props.editPassword}
                           />} />
           <Route path= "/" component= {Home} />
         </Switch>

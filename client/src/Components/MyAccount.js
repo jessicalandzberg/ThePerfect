@@ -12,8 +12,17 @@ class MyAccount extends React.Component {
         <Switch>
           <Route path= "/account/edit"
           render = {() => <EditAccount
+                              editAccountFormData={this.props.editAccountFormData}
+                              updateUserOnClick={this.props.updateUserOnClick}
+                              editHandleChange = {this.props.editHandleChange}
+                              passwordHandleChange = {this.props.passwordHandleChange}
+                              editPassword={this.props.editPassword}
                           /> } />
-          <Route path= "/" component= {AccountSummary} />
+          <Route path= "/account"
+          render = {() => <AccountSummary
+                              currentUser={this.props.currentUser}
+                              setFormOnClick= {this.props.setFormOnClick}
+                          /> } />
         </Switch>
       </div>
     )
