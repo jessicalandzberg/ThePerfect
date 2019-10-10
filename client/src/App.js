@@ -138,18 +138,18 @@ class App extends React.Component {
     e.preventDefault()
     const currentEmail = this.state.currentUser.email;
     const currentPassword = this.state.editPassword;
-    const checkLogin = await loginUser({ email: currentEmail, password: currentPassword })
-    if (!checkLogin.error) {
-      const data  = this.state.editAccountFormData;
-      const { id } = this.state.currentUser;
-      const { email } = await editUser(id, data);
-      const currentUser = await loginUser({ email: email, password: currentPassword });
-      this.setState({ currentUser });
-      this.getFavs();
-      this.props.history.push("/account")
-    } else {
-      console.log("Changes not made")
-    }
+    try {
+        const checkLogin = await loginUser({ email: currentEmail, password: currentPassword })
+        const data  = this.state.editAccountFormData;
+        const { id } = this.state.currentUser;
+        const { email } = await editUser(id, data);
+        const currentUser = await loginUser({ email: email, password: currentPassword });
+        this.setState({ currentUser });
+        this.getFavs();
+        this.props.history.push("/account")
+    } catch (e) {
+        alert("Changes not made")
+      }
   }
 
   setEditAccountFormData = async(e) => {

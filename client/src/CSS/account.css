@@ -83,7 +83,6 @@
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 450px;
 }
 
       .AccountSummaryRow {
@@ -124,7 +123,6 @@
       display: flex;
       flex-direction: column;
       width: 400px;
-      height: 450px;
     }
 
           .EditAccountForm label {
@@ -153,3 +151,27 @@
                 ::-webkit-input-placeholder {
                   color: gray;
                 }
+
+
+/* ==============================
+=============MEDIA QUERY=============
+============================== */
+
+    @media only screen and (max-width:750px) {
+        .EditAccountForm {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          height: 450px;
+        }
+
+        .AccountButton {
+          margin-top: 0px;
+        }
+
+        .Card {
+          width: 300px;
+        }
+
+
+    }

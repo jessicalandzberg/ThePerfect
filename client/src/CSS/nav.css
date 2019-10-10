@@ -40,6 +40,7 @@
       margin-top: 0px;
       margin-bottom: 0px;
       margin-right: 20px;
+      font-size: 18px;
     }
 
           .NavLS a:hover {
@@ -58,6 +59,7 @@
           margin-top: 0px;
           margin-bottom: 0px;
           margin-left: 20px;
+          font-size: 18px;
         }
 
         .NavRS a:hover {
@@ -71,3 +73,51 @@
         .NavRS .cartIcon {
           font-size:18px;
         }
+
+
+/* ==============================
+=============DROP DOWN=============
+============================== */
+
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 140px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  font-size: 12px;
+  padding: 10px 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.NavWelcome {
+  font-weight: bold;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdownHover:hover {
+  color: #8F8B8E
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: #8F8B8E;
+}

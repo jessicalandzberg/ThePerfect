@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import { faHeart as solid } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as regular } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 class Nav extends React.Component {
   constructor(props) {
@@ -29,8 +31,15 @@ render (){
             this.props.currentUser
               ?
               <>
-                <p> <Link to='/account'> My account </Link> </p>
-                <p onClick={this.props.handleLogout}>Logout</p>
+                <div className="dropdown">
+                      <p className= "dropbtn">  <FontAwesomeIcon className= "UserIcon" icon={faUser} /> </p>
+                      <div className="dropdown-content">
+                        <p className="NavWelcome"> Welcome {this.props.currentUser.firstname} </p>
+                        <p className= "dropdownHover"> <Link to='/account'>My account</Link> </p>
+                        <p className= "dropdownHover"> <Link to='/MyFavs'>My favorites</Link> </p>
+                        <p className= "dropdownHover" onClick={this.props.handleLogout}> <Link to='/'> Logout </Link> </p>
+                      </div>
+                </div>
               </>
               :
               <p> <Link to='/SignIn'>Sign in </Link> </p>
