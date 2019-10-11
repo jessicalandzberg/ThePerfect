@@ -43,10 +43,11 @@ class Main extends React.Component {
                             currentUser={this.props.currentUser}
                             favOnClick={this.props.favOnClick}
                             unfavOnClick={this.props.unfavOnClick}
+                            shopRedirect={this.props.shopRedirect}
                           />} />
           <Route path= "/Cart"
           render = {() => <Cart
-                            cartRedirect={this.props.cartRedirect}
+                            shopRedirect={this.props.shopRedirect}
                           />} />
           <Route path= "/account"
           render = {() => <MyAccount

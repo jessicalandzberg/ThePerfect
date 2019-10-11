@@ -183,7 +183,7 @@ class App extends React.Component {
   =============CART REDIRECT=============
   ============================== */
 
-  cartRedirect = (e) => {
+  shopRedirect = (e) => {
     this.props.history.push("/Shop")
   }
 
@@ -218,7 +218,7 @@ class App extends React.Component {
           editHandleChange = {this.editHandleChange}
           passwordHandleChange = {this.passwordHandleChange}
           editPassword={this.state.editPassword}
-          cartRedirect={this.cartRedirect}
+          shopRedirect={this.shopRedirect}
           />
         <Footer />
       </div>

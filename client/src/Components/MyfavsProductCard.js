@@ -10,25 +10,26 @@ class MyfavsProductCard extends React.Component {
   }
   render() {
     return (
-              <div className ="ShopProductCard" key= {this.props.product.id}>
-                <div className ="ProductCardLS">
+              <div className ="MyFavsCard" key= {this.props.product.id}>
+                <div className ="MyFavsCardTop">
                   <img alt="leather jacket" src= {this.props.product.picture}/>
                 </div>
 
-                <div className ="ProductCardRS">
+                <div className ="MyFavsCardBottom">
+                { this.props.favorites.find((fav) => fav.id === this.props.product.id) ?
+                  <FontAwesomeIcon className= "heartIcon"
+                                    icon={solid}
+                                    onClick = {() => {this.props.unfavOnClick(this.props.product.id)}}
+                  /> :
+                  <FontAwesomeIcon className= "heartIcon"
+                                    icon={regular}
+                                    onClick = {() => {this.props.favOnClick(this.props.product.id)}}
+                  />
+                }
                   <h2> {this.props.product.name} </h2>
-                  <h3> {this.props.product.color} </h3>
-                  <h4> {this.props.product.price} </h4>
-                  { this.props.favorites.find((fav) => fav.id === this.props.product.id) ?
-                    <FontAwesomeIcon className= "heartIcon"
-                                      icon={solid}
-                                      onClick = {() => {this.props.unfavOnClick(this.props.product.id)}}
-                    /> :
-                    <FontAwesomeIcon className= "heartIcon"
-                                      icon={regular}
-                                      onClick = {() => {this.props.favOnClick(this.props.product.id)}}
-                    />
-                  }
+                  <p> {this.props.product.color} </p>
+                  <p> {this.props.product.price} </p>
+
                 </div>
               </div>
     )

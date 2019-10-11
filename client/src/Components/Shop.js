@@ -20,6 +20,7 @@ class Shop extends React.Component {
           favOnClick= {this.props.favOnClick} />
       )
     })
+
     return (
       <div className="ShopComponent">
           <div className="ShopContainer">

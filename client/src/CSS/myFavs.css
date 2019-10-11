@@ -40,9 +40,20 @@
             color: white;
           }
 
+
+
+
 /* ==============================
 =============MYFAVS No Favs=============
 ============================== */
+.MyFavsNoFavComponent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
       .MyFavsNoFavContainer {
         height: 100%;
@@ -62,5 +73,96 @@
           .MyFavsNoFavTitle {
             font-size: 32px;
             text-align: center;
-            font-weight: bold;
+            /* font-weight: bold; */
           }
+
+
+          /* ==============================
+          =============MYFAVS With Favs=============
+          ============================== */
+
+          .MyFavsWithFavComponent {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+                .MyFavsWithFavContainer {
+                  height: 100%;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                }
+
+          .MyFavsWithFavTitle {
+            flex: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+          }
+
+                .MyFavsWithFavTitle p {
+                  font-size: 32px;
+                  font-weight: bold;
+                  margin: 0px;
+                }
+
+        .MyFavsWithFavContent {
+          width: 100%;
+          flex: 8.5;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* ==============================
+        =============MY favs card=============
+        ============================== */
+
+        .MyFavsCard {
+          width: 360px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 20px;
+          border: 1px solid #8F8B8E;
+        }
+
+        .MyFavsCardTop{
+          flex:8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+          .MyFavsCardTop img {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 350px
+          }
+
+        .MyFavsCardBottom{
+          flex:2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+
+        .MyFavsCardBottom h2 {
+          margin: 0px;
+        }
+
+        .MyFavsCardBottom p {
+          margin: 0px;
+        }

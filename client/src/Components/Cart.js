@@ -9,7 +9,7 @@ class Cart extends React.Component {
       <div className="CartComponent">
         <div className="CartContainer">
           <p className="CartTitle"> Shopping can be easy and enjoyable </p>
-          <button className= "CartButton" onClick= {this.props.cartRedirect}> Check out the collection </button>
+          <button className= "CartButton" onClick= {this.props.shopRedirect}> Check out the collection </button>
         </div>
       </div>
     )
